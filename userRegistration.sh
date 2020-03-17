@@ -1,9 +1,10 @@
 #!/bin/bash -x
-
+clear
 
 #Discription:Using regx pattern solve the usercases
 #Author:Hrishikesh Bodake
 #Since:March 17 2020/Tuesday
+
 checkFirstName(){
 
 	read -p "Enter Valid FirstName: " firstName
@@ -25,5 +26,16 @@ checkLastName(){
 		echo InValid LastName..LastName should start with capital letter and should countain minimum 3 letter
 	fi
 }
-checkLastName
-
+checkEmailId(){
+	read -p "Enter Valid Email Id: " emailId
+	local	pattern="^[a-zA-Z]{1,}([.]?[a-zA-Z]{1,})?[@]{1}[a-zA-Z]{1,}[.]{1}[a-z]{2,3}([.]?[a-z]{2})?$"
+	if [[ $emailId =~ $pattern ]]
+	then
+		echo Valid Email Id
+	else
+		echo InValid Email Id
+		checkEmailId
+	fi
+}
+checkEmailId
+sleep 1
