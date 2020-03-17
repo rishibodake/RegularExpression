@@ -4,16 +4,16 @@
 #Discription:Using regx pattern solve the usercases
 #Author:Hrishikesh Bodake
 #Since:March 17 2020/Tuesday
-checkUserName(){
+checkFirstName(){
 
-	read -p "Enter UserName: " userName
+	read -p "Enter Valid FirstName: " firstName
 	pattern="^[A-Z][a-z]{2,}"
-	if [[ $userName =~ $pattern ]]
+	if [[ $firstName =~ $pattern ]]
 	then
-		echo Valid
+		echo Valid firstname..
 	else
-		echo InValid
+		echo InValid firstName..firstName should start with capital letter and should countain minimum 3 letters
 	fi
 }
-checkUserName
+checkFirstName
 
