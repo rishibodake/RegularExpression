@@ -13,6 +13,7 @@ checkFirstName(){
 		echo Valid firstname..
 	else
 		echo InValid firstName..firstName should start with capital letter and should countain minimum 3 letters
+		checkFirstName
 	fi
 }
 checkFirstName
