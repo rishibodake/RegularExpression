@@ -48,6 +48,16 @@ checkMobile(){
 		checkMobile
    fi
 }
-checkMobile
-
+checkPassword(){
+   read -p "Enter Valid Password: " passWord
+   local pattern=[a-zA-Z0-9]{8}
+   if [[ $passWord =~ $pattern ]]
+   then
+      echo 8 Pattern Check
+   else
+      echo  pattern Check Fail
+		checkPassword
+   fi
+}
+checkPassword
 sleep 1
