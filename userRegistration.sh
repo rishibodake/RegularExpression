@@ -37,5 +37,17 @@ checkEmailId(){
 		checkEmailId
 	fi
 }
-checkEmailId
+checkMobile(){
+   read -p "Enter Valid Mobile Number: " mobNumber
+   local pattern="^([0-9]{2}\s{1}[0-9]{10})$"
+   if [[ $mobNumber =~ $pattern ]]
+   then
+      echo Valid Mobile Number
+   else
+      echo InValid Mobile Number
+		checkMobile
+   fi
+}
+checkMobile
+
 sleep 1
