@@ -49,9 +49,9 @@ checkMobile(){
    fi
 }
 checkPassword(){
-	#Rule 2 Atleast One UpperCase
+	#Rule 3 Atleast One Numeric
    read -p "Enter Valid Password: " passWord
-   local pattern="[a-z0-9]?[A-Z]"
+   local pattern="[A-Z0-9][a-z]?"
    if [[ $passWord =~ $pattern ]]
    then
       echo 8 Pattern Check
